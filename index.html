@@ -1,12 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webopoly</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Webopoly – Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="script.js"></script>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="#top" aria-label="Webopoly, accueil du wiki">
+        <img src="images/logo.png" alt="">
+      </a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+  <nav class="nav wrap" id="nav" aria-label="Navigation principale">
+    <a href="#regles" aria-current="page">Règles</a>
+    <a href="#plateau">Plateau</a>
+    <a href="#cartes">Cartes</a>
+    <a href="#groupes">Propriétés</a>
+    <a href="#glossaire">Glossaire</a>
+    <a class="btn btn-primary" href="#regles">Commencer</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <span class="badge">Wiki officiel · v0.1</span>
+      <h1>Tout savoir sur Webopoly</h1>
+      <p>Placeholder : une phrase qui explique le jeu, ses règles et ce qu’on trouve dans ce wiki.</p>
+      <form class="search" role="search" onsubmit="return false">
+        <input type="search" placeholder="Rechercher une case, une carte, une règle" aria-label="Rechercher dans le wiki">
+        <button class="btn btn-primary" type="submit">Rechercher</button>
+      </form>
+      <div class="hero-cta">
+        <a class="btn btn-ghost" href="#regles">Lire les règles</a>
+        <a class="btn btn-ghost" href="#plateau">Voir le plateau</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="regles">
+    <div class="wrap">
+      <h2>Explorer le wiki</h2>
+      <p class="sub">Placeholder : choisis une catégorie pour commencer.</p>
+      <div class="grid">
+        <a class="card" href="#regles">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div>
+          <h3>Règles du jeu</h3>
+          <p>Placeholder : mise en place, tour de jeu, conditions de victoire.</p>
+        </a>
+        <a class="card" id="plateau" href="#plateau">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg></div>
+          <h3>Plateau et cases</h3>
+          <p>Placeholder : propriétés, hébergements, cases spéciales.</p>
+        </a>
+        <a class="card dashed" id="cartes" href="#cartes">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></div>
+          <h3>Cartes Skill</h3>
+          <p>Placeholder : liste et effets des cartes Skill.</p>
+        </a>
+        <a class="card dashed" href="#cartes">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg></div>
+          <h3>Cartes IA</h3>
+          <p>Placeholder : liste et effets des cartes IA.</p>
+        </a>
+        <a class="card bug" href="#plateau">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8a4 4 0 018 0v6a4 4 0 01-8 0zM3 13h5M16 13h5M5 7l3 2M19 7l-3 2M5 20l3-3M19 20l-3-3"/></svg></div>
+          <h3>Bug en prod</h3>
+          <p>Placeholder : prison, visite simple, comment en sortir.</p>
+        </a>
+        <a class="card start" id="glossaire" href="#glossaire">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Glossaire</h3>
+          <p>Placeholder : tous les termes du jeu, de A à Z.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="groupes">
+    <div class="wrap">
+      <h2>Groupes de propriétés</h2>
+      <p class="sub">Placeholder : les 8 groupes de couleur du plateau.</p>
+      <div class="groups">
+        <div class="group" style="--c:var(--brown)"><i></i><div><strong>Marron</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--sky)"><i></i><div><strong>Bleu ciel</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--pink)"><i></i><div><strong>Rose</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--orange)"><i></i><div><strong>Orange</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--red)"><i></i><div><strong>Rouge</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--yellow)"><i></i><div><strong>Jaune</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--green)"><i></i><div><strong>Vert</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--navy)"><i></i><div><strong>Bleu marine</strong><span>Placeholder</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Derniers articles</h2>
+      <p class="sub">Placeholder : les pages récemment ajoutées ou modifiées.</p>
+      <div class="grid">
+        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Webopoly · Wiki officiel</span>
+    <span>Placeholder : liens, contact, crédits</span>
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
 </body>
 </html>
