@@ -7,8 +7,8 @@ function diceRoll() {
     rollResults.push(Math.floor(Math.random() * (6 - 1 + 1)) + 1)
     rollResults.push(Math.floor(Math.random() * (6 - 1 + 1)) + 1)
     
-    document.getElementById("first-dice").src = "img/dice/dice_"+rollResults[0]+".png"
-    document.getElementById("second-dice").src = "img/dice/dice_"+rollResults[1]+".png"
+    document.getElementById("first-dice").src = "images/dice/dice_"+rollResults[0]+".png"
+    document.getElementById("second-dice").src = "images/dice/dice_"+rollResults[1]+".png"
 }
 
 rollButton.addEventListener("click", diceRoll);

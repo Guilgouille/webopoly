@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dice Roll Simulator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="dice-roll-div">
-        <h1>Dice Rolling</h1>
-    
-        <button id="roll-button" class="btn">Roll Dice</button>
+<link rel="stylesheet" href="css/style.css">
+
+<head>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="bar">
+        <a class="logo" href="#top" aria-label="Webopoly, accueil du wiki">
+          <img src="images/logo.png" alt="">
+        </a>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="nav"><i></i><i></i><i></i></button>
+      </div>
     </div>
-    <div class="dice-roll-div">
-        <img src = "img/dice/dice_1.png" id="first-dice"/>
-        <img src = "img/dice/dice_1.png" id="second-dice"/>
-    </div>
-    <script src="script/dice.js"></script>
-  </body>
+    <nav class="nav wrap" id="nav" aria-label="Navigation principale">
+      <a href="#regles" aria-current="page">Règles</a>
+      <a href="#plateau">Plateau</a>
+      <a href="#cartes">Cartes</a>
+      <a href="#groupes">Propriétés</a>
+      <a href="#glossaire">Glossaire</a>
+      <a class="btn btn-primary" href="#regles">Commencer</a>
+    </nav>
+  </header>
+</head>
+
+<body>
+  <div class="dice-roll-div">
+    <h1>Dice Rolling</h1>
+
+    <button id="roll-button" class="btn">Roll Dice</button>
+  </div>
+  <div class="dice-roll-div">
+    <img src="images/dice/dice_1.png" id="first-dice" />
+    <img src="images/dice/dice_1.png" id="second-dice" />
+  </div>
+  <script src="js/dice.js"></script>
+</body>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Webopoly · Wiki officiel</span>
+    <span>Placeholder : liens, contact, crédits</span>
+  </div>
+</footer>
+
 </html>
