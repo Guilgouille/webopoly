@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/style.css">
-
 <head>
-  <header class="site-header">
-    <div class="wrap">
-      <div class="bar">
-        <a class="logo" href="#top" aria-label="Webopoly, accueil du wiki">
-          <img src="images/logo.png" alt="">
-        </a>
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"
-          aria-controls="nav"><i></i><i></i><i></i></button>
-      </div>
-    </div>
-    <nav class="nav wrap" id="nav" aria-label="Navigation principale">
-      <a href="#regles" aria-current="page">Règles</a>
-      <a href="#plateau">Plateau</a>
-      <a href="#cartes">Cartes</a>
-      <a href="#groupes">Propriétés</a>
-      <a href="#glossaire">Glossaire</a>
-      <a class="btn btn-primary" href="#regles">Commencer</a>
-    </nav>
-  </header>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dice – Webopoly Wiki</title>
+<meta name="description" content="Roll the two Webopoly dice from your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <div class="dice-roll-div">
-    <h1>Dice Rolling</h1>
 
-    <button id="roll-button" class="btn">Roll Dice</button>
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Webopoly, wiki home">
+        <img src="images/logo.png" alt="">
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+    </div>
   </div>
-  <div class="dice-roll-div">
-    <img src="images/dice/dice_1.png" id="first-dice" />
-    <img src="images/dice/dice_1.png" id="second-dice" />
+  <nav class="nav wrap" id="nav" aria-label="Main navigation">
+    <a href="rules.html">Rules</a>
+    <a href="board.html">Board</a>
+    <a href="skills.html">Skills</a>
+    <a href="hosting.html">Hosting</a>
+    <a href="dice.html" aria-current="page">Dice</a>
+    <a class="btn btn-primary" href="rules.html#setup">Get started</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="page-head">
+      <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Dice</li></ol>
+      <h1>Roll the dice</h1>
+      <p>Lost the dice? Roll them here. A <strong>double</strong> lets you play again, but a third double in a row sends you straight to <a href="board.html#sq-10">Bug in prod</a>.</p>
+    </div>
+
+    <section class="dice-box">
+      <div class="dice" id="dice">
+        <img src="images/dice/dice_1.png" id="first-dice" alt="First die: 1" width="120" height="120">
+        <img src="images/dice/dice_1.png" id="second-dice" alt="Second die: 1" width="120" height="120">
+      </div>
+      <p class="dice-result" id="dice-result" aria-live="polite">Press the button to roll.</p>
+      <button id="roll-button" class="btn btn-primary dice-btn" type="button">Roll the dice</button>
+    </section>
   </div>
-  <script src="js/dice.js"></script>
-</body>
+</main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Webopoly · Wiki officiel</span>
-    <span>Placeholder : liens, contact, crédits</span>
+    <span>© 2026 Webopoly · Official wiki</span>
+    <span>Placeholder: links, contact, credits</span>
   </div>
 </footer>
 
+<script src="js/nav.js" defer></script>
+<script src="js/dice.js" defer></script>
+</body>
 </html>

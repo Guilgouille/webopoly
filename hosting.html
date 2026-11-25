@@ -21,13 +21,12 @@
     </div>
   </div>
   <nav class="nav wrap" id="nav" aria-label="Main navigation">
-    <a href="index.html#rules">Rules</a>
-    <a href="index.html#board">Board</a>
+    <a href="rules.html">Rules</a>
+    <a href="board.html">Board</a>
     <a href="skills.html">Skills</a>
     <a href="hosting.html" aria-current="page">Hosting</a>
-    <a href="index.html#groups">Properties</a>
-    <a href="index.html#glossary">Glossary</a>
-    <a class="btn btn-primary" href="index.html#rules">Get started</a>
+    <a href="dice.html">Dice</a>
+    <a class="btn btn-primary" href="rules.html#setup">Get started</a>
   </nav>
 </header>
 
@@ -36,7 +35,7 @@
     <div class="page-head">
       <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Hosting</li></ol>
       <h1>Web hosting</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Behind every website there is a computer that keeps it online. On the board, the 4 hosting providers sit in the middle of each side. In real life, they are what makes a finished website visible to the world.</p>
       <nav class="chips" aria-label="On this page">
         <a class="chip" href="#cards">Hosting cards</a>
         <a class="chip" href="#about">What is a host?</a>
@@ -49,32 +48,42 @@
   <section id="cards">
     <div class="wrap">
       <h2>Hosting cards</h2>
-      <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="sub">Each provider costs <strong>€200</strong>. The more providers you own, the more your rivals pay when they land on one. Own all 4 and you win the game.</p>
       <div class="grid cols-4">
-        <div class="card skill">
-          <span class="tag">Hosting</span>
-          <h3>Hosting card 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <dl class="stats"><div><dt>Price</dt><dd>—</dd></div><div><dt>Rent</dt><dd>—</dd></div></dl>
-        </div>
-        <div class="card skill">
-          <span class="tag">Hosting</span>
-          <h3>Hosting card 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <dl class="stats"><div><dt>Price</dt><dd>—</dd></div><div><dt>Rent</dt><dd>—</dd></div></dl>
-        </div>
-        <div class="card skill">
-          <span class="tag">Hosting</span>
-          <h3>Hosting card 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <dl class="stats"><div><dt>Price</dt><dd>—</dd></div><div><dt>Rent</dt><dd>—</dd></div></dl>
-        </div>
-        <div class="card skill">
-          <span class="tag">Hosting</span>
-          <h3>Hosting card 4</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <dl class="stats"><div><dt>Price</dt><dd>—</dd></div><div><dt>Rent</dt><dd>—</dd></div></dl>
-        </div>
+        <a class="card skill" href="board.html#sq-5">
+          <span class="tag">Hosting · Square 5</span>
+          <h3>CloudNest</h3>
+          <p>Bottom side of the board, between New computer and Coworking.</p>
+          <dl class="stats"><div><dt>Price</dt><dd>€200</dd></div><div><dt>Invoice</dt><dd>€25–100</dd></div></dl>
+        </a>
+        <a class="card skill" href="board.html#sq-15">
+          <span class="tag">Hosting · Square 15</span>
+          <h3>ServO</h3>
+          <p>Left side of the board, between Open space and Creative studio.</p>
+          <dl class="stats"><div><dt>Price</dt><dd>€200</dd></div><div><dt>Invoice</dt><dd>€25–100</dd></div></dl>
+        </a>
+        <a class="card skill" href="board.html#sq-25">
+          <span class="tag">Hosting · Square 25</span>
+          <h3>NuageBox</h3>
+          <p>Top side of the board, between Lyon building and Marseille studio.</p>
+          <dl class="stats"><div><dt>Price</dt><dd>€200</dd></div><div><dt>Invoice</dt><dd>€25–100</dd></div></dl>
+        </a>
+        <a class="card skill" href="board.html#sq-35">
+          <span class="tag">Hosting · Square 35</span>
+          <h3>HostaLine</h3>
+          <p>Right side of the board, between Paris rooftop and a Skill square.</p>
+          <dl class="stats"><div><dt>Price</dt><dd>€200</dd></div><div><dt>Invoice</dt><dd>€25–100</dd></div></dl>
+        </a>
+      </div>
+      <div class="callout">
+        <p class="h-sm">What a rival pays you</p>
+        <ul>
+          <li>You own <strong>1</strong> provider: <strong>€25</strong>.</li>
+          <li>You own <strong>2</strong> providers: <strong>€50</strong>.</li>
+          <li>You own <strong>3</strong> providers: <strong>€100</strong>.</li>
+          <li>You own <strong>all 4</strong>: you <strong>win the game</strong> straight away.</li>
+          <li>Skill cards change nothing on a hosting provider.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -83,42 +92,51 @@
     <div class="article">
       <article class="prose">
         <h2 id="about">What is a web host?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p>A web host (or hosting provider) is a company that <strong>rents out computers, called servers, that are permanently switched on and connected to the Internet</strong>. A website is made of files (pages, images, code) and often a database. Those files have to live somewhere so that anyone can visit the site at any time, day or night. That “somewhere” is the host’s server. To use an analogy: the website is a shop, the host is the building you rent it in, and the domain name (for example <code>my-agency.com</code>) is the street address that tells people where to find it.</p>
+        <p>The host’s role goes beyond storage. It keeps the servers running <strong>24 hours a day</strong>, sends the pages to visitors whenever their browser asks for them, provides <strong>security</strong> (encrypted connections with HTTPS, firewalls, <strong>backups</strong>), and offers <strong>technical support</strong> when something goes wrong. Some hosts also provide email addresses linked to the domain name.</p>
+        <p>There are several kinds of hosting, which you can compare with housing:</p>
+        <ul>
+          <li><strong>Shared hosting</strong>: many websites share the same server, like a flat share. It is cheap and enough for a small showcase site, but performance depends on your neighbors.</li>
+          <li><strong>VPS</strong> (virtual private server): a reserved slice of a server, like your own apartment in a building. You get more power and more control.</li>
+          <li><strong>Dedicated server</strong>: a whole machine just for you, like a house. It is powerful and expensive.</li>
+          <li><strong>Cloud hosting</strong>: resources that you can increase or reduce on demand, and pay for according to use. It suits sites with variable traffic.</li>
+          <li><strong>Managed hosting</strong>: the host also takes care of the technical upkeep (updates, security, speed), often for a specific tool such as WordPress.</li>
+        </ul>
+        <p>Well-known providers include OVHcloud, o2switch, Infomaniak, IONOS and Hostinger for classic offers, and cloud platforms such as AWS, Google Cloud, Microsoft Azure or Scaleway for larger needs. Some platforms, like Netlify or Vercel, specialize in hosting modern websites built by developers.</p>
 
         <h2 id="why">Why a web agency calls on a host</h2>
+        <p>An agency designs and builds websites, but <strong>a finished site that is not hosted is invisible</strong>. Choosing the right host is therefore part of the job, for several reasons:</p>
         <ul>
-          <li><strong>Performance</strong>: lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li><strong>Availability</strong>: sed do eiusmod tempor incididunt ut labore et dolore.</li>
-          <li><strong>Security</strong>: ut enim ad minim veniam, quis nostrud exercitation.</li>
-          <li><strong>Compliance</strong>: duis aute irure dolor in reprehenderit in voluptate.</li>
-          <li><strong>Compatibility</strong>: excepteur sint occaecat cupidatat non proident.</li>
-          <li><strong>Business model</strong>: sunt in culpa qui officia deserunt mollit anim.</li>
+          <li><strong>Performance</strong>: a good host makes a site load fast, which improves the visitor’s experience and the search ranking (see <a href="skills/dev-06.html">DEV-06</a> and <a href="skills/mkt-01.html">MKT-01</a>).</li>
+          <li><strong>Availability</strong>: hosts promise an <em>uptime</em>, the share of time the site is online. A promise of 99.9% still allows about 8 hours of downtime per year; for an online shop, that matters.</li>
+          <li><strong>Security</strong>: backups, updates and protection against attacks reduce the risks (see <a href="skills/dev-07.html">DEV-07</a>).</li>
+          <li><strong>Compliance</strong>: the location of the servers matters for personal data. Under the GDPR, many European clients prefer a host whose servers are in Europe.</li>
+          <li><strong>Compatibility</strong>: the host must support the tools the site needs (a given PHP or Node.js version, a type of database…).</li>
+          <li><strong>Business model</strong>: many agencies sell hosting and maintenance as a monthly service, which brings recurring income and lets them look after the site over time.</li>
         </ul>
+        <p>An agency also uses hosting for its own work: a <strong>staging environment</strong> (a private copy of the site used for testing) lets the team try changes before publishing them on the <strong>production</strong> site that visitors see.</p>
 
         <h2 id="examples">Examples of use cases</h2>
         <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-          <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</li>
+          <li>A small showcase website for a local bakery is placed on an inexpensive shared hosting plan, which is enough for its few hundred visits per month.</li>
+          <li>An online shop expects traffic peaks during the sales: the agency chooses a cloud or VPS offer that can be scaled up for the busy days.</li>
+          <li>A client who edits their site often on WordPress gets a managed hosting plan, so that updates and security are handled by the provider.</li>
+          <li>The agency moves a client’s slow site to a faster host: it first tests the copy on the new server, then switches the domain name over when everything works.</li>
+          <li>Before starting, the agency clarifies in the contract who pays for the hosting and in whose name the account is opened, to avoid disputes if the collaboration ends.</li>
         </ul>
 
         <h2 id="vocabulary">Vocabulary to know</h2>
         <dl class="vocab">
-          <div><dt>Server</dt><dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd></div>
-          <div><dt>Domain name</dt><dd>Sed do eiusmod tempor incididunt ut labore.</dd></div>
-          <div><dt>Uptime</dt><dd>Ut enim ad minim veniam, quis nostrud exercitation.</dd></div>
-          <div><dt>Staging environment</dt><dd>Duis aute irure dolor in reprehenderit.</dd></div>
-          <div><dt>Bandwidth</dt><dd>Excepteur sint occaecat cupidatat non proident.</dd></div>
-          <div><dt>Scalability</dt><dd>Sunt in culpa qui officia deserunt mollit anim.</dd></div>
+          <div><dt>Server</dt><dd>A computer that receives requests and answers them.</dd></div>
+          <div><dt>Domain name</dt><dd>The readable address of a site (<code>example.com</code>). It is bought separately from hosting, from a registrar, and then linked to the host through the <strong>DNS</strong> (the Internet’s “phone book”).</dd></div>
+          <div><dt>Uptime</dt><dd>The percentage of time a site is available online.</dd></div>
+          <div><dt>Staging environment</dt><dd>A private test copy of a site, used before publishing changes.</dd></div>
+          <div><dt>Bandwidth</dt><dd>The amount of data a site can send to visitors in a given time.</dd></div>
+          <div><dt>Scalability</dt><dd>The ability to handle more visitors by adding resources.</dd></div>
         </dl>
       </article>
 
       <aside class="aside">
-        <div class="card-visual" role="img" aria-label="Hosting card image placeholder">
-          <strong>Hosting</strong>
-          <span>Card image placeholder</span>
-        </div>
         <nav class="toc" aria-label="On this page">
           <strong>On this page</strong>
           <a href="#cards">Hosting cards</a>

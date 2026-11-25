@@ -200,24 +200,6 @@ h1 {
   margin: 0 0 24px;
   font-size: 1.05rem;
 }
-.search {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 560px;
-}
-.search input {
-  min-height: 48px;
-  padding: 0 16px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-}
-.search input::placeholder {
-  color: var(--muted);
-}
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -355,12 +337,6 @@ footer .wrap {
   .groups {
     grid-template-columns: repeat(4, 1fr);
   }
-  .search {
-    flex-direction: row;
-  }
-  .search input {
-    flex: 1;
-  }
 }
 /* ==========  Desktop (>= 960px)  ========== */
 @media (min-width: 960px) {
@@ -372,7 +348,7 @@ footer .wrap {
     flex-direction: row;
     align-items: center;
     border: 0;
-    padding: 0;
+    padding: 0 0 12px;
     gap: 2px;
   }
   .nav .btn {
@@ -548,25 +524,6 @@ a.card:hover {
   flex-direction: column;
   gap: 14px;
 }
-.card-visual {
-  aspect-ratio: 5 / 7;
-  width: min(100%, 260px);
-  border: 1px dashed var(--line);
-  border-top: 10px solid var(--c, var(--brand));
-  border-radius: var(--radius);
-  background: color-mix(in srgb, var(--c, var(--brand)) 25%, var(--surface));
-  display: grid;
-  place-content: center;
-  text-align: center;
-  gap: 6px;
-  color: var(--muted);
-  font-size: 0.9rem;
-  padding: 16px;
-}
-.card-visual strong {
-  color: var(--ink);
-  font-size: 1.1rem;
-}
 .toc {
   display: flex;
   flex-direction: column;
@@ -634,9 +591,6 @@ a.card:hover {
   .article {
     grid-template-columns: minmax(0, 1fr) 280px;
     gap: 48px;
-  }
-  .card-visual {
-    width: 100%;
   }
   .aside {
     position: sticky;
@@ -840,24 +794,6 @@ h1 {
   margin: 0 0 24px;
   font-size: 1.05rem;
 }
-.search {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 560px;
-}
-.search input {
-  min-height: 48px;
-  padding: 0 16px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--ink);
-  font: inherit;
-}
-.search input::placeholder {
-  color: var(--muted);
-}
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -987,10 +923,6 @@ footer .wrap {
   gap: 6px;
 }
 
-.dice-roll-div {
-    text-align: center;
-    margin: 1em;
-}
 
 /* ==========  Tablette (>= 640px)  ========== */
 @media (min-width: 640px) {
@@ -999,12 +931,6 @@ footer .wrap {
   }
   .groups {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .search {
-    flex-direction: row;
-  }
-  .search input {
-    flex: 1;
   }
 }
 /* ==========  Desktop (>= 960px)  ========== */
@@ -1017,7 +943,7 @@ footer .wrap {
     flex-direction: row;
     align-items: center;
     border: 0;
-    padding: 0;
+    padding: 0 0 12px;
     gap: 2px;
   }
   .nav .btn {
@@ -1038,4 +964,495 @@ footer .wrap {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* =====================================================================
+   Rules page (rules.html) – elements taken from the printed rulebook
+   ===================================================================== */
+.kicker {
+  margin: 0;
+  color: var(--brand);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.h-sm {
+  margin: 0 0 10px;
+  color: var(--brand);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.split {
+  display: grid;
+  gap: 20px;
+}
+
+/* Numbered steps (purple square numbers) */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--brand);
+  color: var(--brand-ink);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+/* Swatch list (profiles → family) */
+.swatches {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.swatches li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+.swatches i {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--c);
+  flex: none;
+}
+.swatches span {
+  color: var(--muted);
+  margin-left: auto;
+}
+
+/* Short colour bar above a card title */
+.bar-c {
+  display: block;
+  width: 36px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--c, var(--brand));
+}
+
+/* Board image */
+.figure {
+  margin: 0;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Purple panel (starting money, "Help! I need money") */
+.panel {
+  background: var(--brand);
+  color: var(--brand-ink);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.panel h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.panel .card {
+  color: var(--ink);
+  box-shadow: none;
+  border: 0;
+}
+
+/* Banknotes */
+.notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.notes li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+.notes b {
+  display: block;
+  padding: 6px 0;
+  text-align: center;
+  background: var(--surface);
+  color: var(--ink);
+  border: 4px solid var(--c);
+  border-radius: 6px;
+  font-size: 1.1rem;
+}
+.notes-total {
+  margin: 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+/* Bonus / penalty pills (AI cards) */
+.pill {
+  display: inline-block;
+  min-width: 68px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+.pill.bonus {
+  background: var(--ok-bg);
+  color: #1b7a3a;
+}
+.pill.penalty {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+.ai-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.ai-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* Tinted "good to know" box */
+.callout {
+  background: var(--tint);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-top: 14px;
+}
+.callout ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+@media (min-width: 640px) {
+  .notes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 960px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .split.wide-left {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+/* Rules page fixes: panels keep their own height, visible text links, tight callouts */
+.panel {
+  align-self: start;
+}
+main p a,
+main li a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.callout p {
+  margin: 0;
+}
+.callout .h-sm {
+  margin-bottom: 10px;
+}
+
+/* =====================================================================
+   Skill pages – card identifier tag
+   ===================================================================== */
+.page-head .tag.id {
+  background: var(--tint);
+  color: var(--brand);
+}
+.prose code,
+.vocab code {
+  font-size: 0.9em;
+  background: var(--tint);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+/* =====================================================================
+   Board page (board.html) – board map with numbered markers + legend
+   ===================================================================== */
+.board-frame {
+  position: relative;
+}
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 2px solid var(--c, var(--brand));
+  font-size: 0.65rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(22, 21, 46, 0.18);
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.marker:hover,
+.marker:focus-visible {
+  transform: translate(-50%, -50%) scale(1.25);
+  background: var(--c, var(--brand));
+  color: var(--brand-ink);
+  z-index: 1;
+}
+.marker.t-start { --c: #16a34a; }
+.marker.t-bug,
+.marker.t-crash,
+.marker.t-tax { --c: var(--danger); }
+
+/* Square-type key */
+.key {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.key-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.key-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--tint);
+  color: var(--brand);
+}
+.key-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.key-item.t-office .key-icon {
+  background: linear-gradient(var(--orange) 0 30%, var(--tint) 30%);
+}
+.key-item.t-start .key-icon { background: var(--ok-bg); color: #16a34a; }
+.key-item.t-bug .key-icon,
+.key-item.t-crash .key-icon,
+.key-item.t-tax .key-icon { background: var(--danger-bg); color: var(--danger); }
+.key-item p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.key-item .count {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.key-item strong a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Colour groups */
+#groups .groups {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+}
+.group ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+.group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.group li a:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+/* All 40 squares, one card per side */
+.sides .card > p {
+  margin-bottom: 6px;
+}
+.sq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.sq {
+  display: grid;
+  grid-template-columns: 26px 22px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 10px;
+  scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 90px);
+  transition: background 0.3s;
+}
+.sq .num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-align: right;
+}
+.sq .sw {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--c, var(--tint));
+  color: var(--brand);
+}
+.sq .sw svg {
+  width: 14px;
+  height: 14px;
+}
+.sq.t-start .sw { background: var(--ok-bg); color: #16a34a; }
+.sq.t-bug .sw,
+.sq.t-crash .sw,
+.sq.t-tax .sw { background: var(--danger-bg); color: var(--danger); }
+.sq strong {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.sq small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.sq b {
+  font-size: 0.9rem;
+}
+.sq:target {
+  background: var(--tint);
+  box-shadow: inset 0 0 0 2px var(--brand);
+}
+
+@media (min-width: 640px) {
+  .grid.sides {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .grid.sides {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .marker {
+    min-width: 24px;
+    height: 24px;
+    font-size: 0.72rem;
+  }
+}
+
+/* Grid children may shrink below their content width (keeps the board image inside the screen on phones) */
+.split > *,
+.article > * {
+  min-width: 0;
+}
+
+/* =====================================================================
+   Dice page (dice.html)
+   ===================================================================== */
+.dice-box {
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+  margin: 12px 0 40px;
+  padding: 32px 20px;
+  background: var(--tint);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.dice {
+  display: flex;
+  gap: 20px;
+}
+.dice img {
+  width: clamp(88px, 28vw, 140px);
+  height: auto;
+}
+.dice.rolling img {
+  animation: dice-shake 0.4s ease;
+}
+.dice.rolling img + img {
+  animation-delay: 0.05s;
+}
+@keyframes dice-shake {
+  0% { transform: rotate(0) scale(1); }
+  30% { transform: rotate(-18deg) scale(1.08); }
+  60% { transform: rotate(12deg) scale(0.96); }
+  100% { transform: rotate(0) scale(1); }
+}
+.dice-result {
+  margin: 0;
+  min-height: 1.6em;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.dice-btn {
+  min-width: 200px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dice.rolling img { animation: none; }
 }

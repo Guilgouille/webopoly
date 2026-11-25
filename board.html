@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The board – Webopoly Wiki</title>
+<meta name="description" content="Legend of the Webopoly board: the 40 squares, the 8 colour groups of offices, the hosting providers and the special squares.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Webopoly, wiki home">
+        <img src="images/logo.png" alt="">
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+  <nav class="nav wrap" id="nav" aria-label="Main navigation">
+    <a href="rules.html">Rules</a>
+    <a href="board.html" aria-current="page">Board</a>
+    <a href="skills.html">Skills</a>
+    <a href="hosting.html">Hosting</a>
+    <a href="dice.html">Dice</a>
+    <a class="btn btn-primary" href="rules.html#setup">Get started</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="page-head">
+      <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Board</li></ol>
+      <h1>The board</h1>
+      <p>40 squares, from the student bedroom to La Défense tower. Pawns start on <strong>Start of the month</strong> and move clockwise. Prices rise the further you go. Tap a number on the board to see what that square does.</p>
+      <nav class="chips" aria-label="On this page">
+        <a class="chip" href="#map">Board map</a>
+        <a class="chip" href="#key">Square types</a>
+        <a class="chip" href="#groups">Colour groups</a>
+        <a class="chip" href="#squares">All 40 squares</a>
+      </nav>
+    </div>
+  </div>
+
+  <section id="map">
+    <div class="wrap">
+      <div class="split wide-left">
+        <figure class="figure board-map">
+          <div class="board-frame">
+            <img src="images/tabletop-game.png" alt="The Webopoly board: 40 squares around the edge, with offices in 8 colour groups, 4 hosting providers, 8 Skill squares, the AI Lab and 4 corners. Numbered markers link to the legend below." width="1216" height="1216">
+          <a class="marker t-start" href="#sq-0" style="left:88.82%;top:88.82%" title="0. Start of the month" aria-label="Square 0: Start of the month">0</a>
+          <a class="marker t-office" href="#sq-1" style="left:82.89%;top:85.03%;--c:var(--brown)" title="1. Student bedroom" aria-label="Square 1: Student bedroom">1</a>
+          <a class="marker t-skill" href="#sq-2" style="left:74.67%;top:85.03%" title="2. Skill" aria-label="Square 2: Skill">2</a>
+          <a class="marker t-office" href="#sq-3" style="left:66.45%;top:85.03%;--c:var(--brown)" title="3. Garage" aria-label="Square 3: Garage">3</a>
+          <a class="marker t-tax" href="#sq-4" style="left:58.22%;top:85.03%" title="4. New computer" aria-label="Square 4: New computer">4</a>
+          <a class="marker t-hosting" href="#sq-5" style="left:50%;top:85.03%" title="5. CloudNest" aria-label="Square 5: CloudNest">5</a>
+          <a class="marker t-office" href="#sq-6" style="left:41.78%;top:85.03%;--c:var(--sky)" title="6. Coworking" aria-label="Square 6: Coworking">6</a>
+          <a class="marker t-skill" href="#sq-7" style="left:33.55%;top:85.03%" title="7. Skill" aria-label="Square 7: Skill">7</a>
+          <a class="marker t-office" href="#sq-8" style="left:25.33%;top:85.03%;--c:var(--sky)" title="8. Incubator" aria-label="Square 8: Incubator">8</a>
+          <a class="marker t-office" href="#sq-9" style="left:17.11%;top:85.03%;--c:var(--sky)" title="9. Startup hub" aria-label="Square 9: Startup hub">9</a>
+          <a class="marker t-bug" href="#sq-10" style="left:11.18%;top:88.82%" title="10. Bug in prod" aria-label="Square 10: Bug in prod">10</a>
+          <a class="marker t-office" href="#sq-11" style="left:14.97%;top:82.89%;--c:var(--pink)" title="11. Shared office" aria-label="Square 11: Shared office">11</a>
+          <a class="marker t-skill" href="#sq-12" style="left:14.97%;top:74.67%" title="12. Skill" aria-label="Square 12: Skill">12</a>
+          <a class="marker t-office" href="#sq-13" style="left:14.97%;top:66.45%;--c:var(--pink)" title="13. City-centre office" aria-label="Square 13: City-centre office">13</a>
+          <a class="marker t-office" href="#sq-14" style="left:14.97%;top:58.22%;--c:var(--pink)" title="14. Open space" aria-label="Square 14: Open space">14</a>
+          <a class="marker t-hosting" href="#sq-15" style="left:14.97%;top:50%" title="15. ServO" aria-label="Square 15: ServO">15</a>
+          <a class="marker t-office" href="#sq-16" style="left:14.97%;top:41.78%;--c:var(--orange)" title="16. Creative studio" aria-label="Square 16: Creative studio">16</a>
+          <a class="marker t-skill" href="#sq-17" style="left:14.97%;top:33.55%" title="17. Skill" aria-label="Square 17: Skill">17</a>
+          <a class="marker t-office" href="#sq-18" style="left:14.97%;top:25.33%;--c:var(--orange)" title="18. Industrial loft" aria-label="Square 18: Industrial loft">18</a>
+          <a class="marker t-office" href="#sq-19" style="left:14.97%;top:17.11%;--c:var(--orange)" title="19. Office floor" aria-label="Square 19: Office floor">19</a>
+          <a class="marker t-ai" href="#sq-20" style="left:11.18%;top:11.18%" title="20. AI Lab" aria-label="Square 20: AI Lab">20</a>
+          <a class="marker t-office" href="#sq-21" style="left:17.11%;top:14.97%;--c:var(--red)" title="21. Lille building" aria-label="Square 21: Lille building">21</a>
+          <a class="marker t-skill" href="#sq-22" style="left:25.33%;top:14.97%" title="22. Skill" aria-label="Square 22: Skill">22</a>
+          <a class="marker t-office" href="#sq-23" style="left:33.55%;top:14.97%;--c:var(--red)" title="23. Bordeaux building" aria-label="Square 23: Bordeaux building">23</a>
+          <a class="marker t-office" href="#sq-24" style="left:41.78%;top:14.97%;--c:var(--red)" title="24. Lyon building" aria-label="Square 24: Lyon building">24</a>
+          <a class="marker t-hosting" href="#sq-25" style="left:50%;top:14.97%" title="25. NuageBox" aria-label="Square 25: NuageBox">25</a>
+          <a class="marker t-office" href="#sq-26" style="left:58.22%;top:14.97%;--c:var(--yellow)" title="26. Marseille studio" aria-label="Square 26: Marseille studio">26</a>
+          <a class="marker t-office" href="#sq-27" style="left:66.45%;top:14.97%;--c:var(--yellow)" title="27. Nantes HQ" aria-label="Square 27: Nantes HQ">27</a>
+          <a class="marker t-skill" href="#sq-28" style="left:74.67%;top:14.97%" title="28. Skill" aria-label="Square 28: Skill">28</a>
+          <a class="marker t-office" href="#sq-29" style="left:82.89%;top:14.97%;--c:var(--yellow)" title="29. Creative campus" aria-label="Square 29: Creative campus">29</a>
+          <a class="marker t-crash" href="#sq-30" style="left:88.82%;top:11.18%" title="30. Your site crashes!" aria-label="Square 30: Your site crashes!">30</a>
+          <a class="marker t-office" href="#sq-31" style="left:85.03%;top:17.11%;--c:var(--green)" title="31. Paris showroom" aria-label="Square 31: Paris showroom">31</a>
+          <a class="marker t-office" href="#sq-32" style="left:85.03%;top:25.33%;--c:var(--green)" title="32. Private mansion" aria-label="Square 32: Private mansion">32</a>
+          <a class="marker t-skill" href="#sq-33" style="left:85.03%;top:33.55%" title="33. Skill" aria-label="Square 33: Skill">33</a>
+          <a class="marker t-office" href="#sq-34" style="left:85.03%;top:41.78%;--c:var(--green)" title="34. Paris rooftop" aria-label="Square 34: Paris rooftop">34</a>
+          <a class="marker t-hosting" href="#sq-35" style="left:85.03%;top:50%" title="35. HostaLine" aria-label="Square 35: HostaLine">35</a>
+          <a class="marker t-skill" href="#sq-36" style="left:85.03%;top:58.22%" title="36. Skill" aria-label="Square 36: Skill">36</a>
+          <a class="marker t-office" href="#sq-37" style="left:85.03%;top:66.45%;--c:var(--navy)" title="37. New York office" aria-label="Square 37: New York office">37</a>
+          <a class="marker t-tax" href="#sq-38" style="left:85.03%;top:74.67%" title="38. Software subscriptions" aria-label="Square 38: Software subscriptions">38</a>
+          <a class="marker t-office" href="#sq-39" style="left:85.03%;top:82.89%;--c:var(--navy)" title="39. La Défense tower" aria-label="Square 39: La Défense tower">39</a>
+          </div>
+          <figcaption>Numbers follow the direction of play, starting at 0 on Start of the month (bottom right).</figcaption>
+        </figure>
+
+        <div id="key">
+          <h2>Square types</h2>
+          <p class="sub">What each kind of square does when you land on it. Full details in the <a href="rules.html#squares">rules</a>.</p>
+          <ul class="key">
+          <li class="key-item t-office">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5l8-2v18M12 21h8V9l-8-2"/><path d="M8 8v.01M8 12v.01M8 16v.01M16 12v.01M16 16v.01"/></svg></span>
+            <div><strong>Office</strong> <span class="count">× 22</span><p>Buy it if it is free. Owned by a rival? Pay their invoice. The colour band shows its group.</p></div>
+          </li>
+          <li class="key-item t-hosting">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+            <div><strong><a href="hosting.html">Hosting provider</a></strong> <span class="count">× 4</span><p>Costs €200. Rivals pay €25, €50 or €100 depending on how many you own. Own all 4 to win.</p></div>
+          </li>
+          <li class="key-item t-skill">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+            <div><strong><a href="skills.html">Skill</a></strong> <span class="count">× 8</span><p>Draw a Skill card and keep it in your hand. It’s free!</p></div>
+          </li>
+          <li class="key-item t-ai">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7z"/></svg></span>
+            <div><strong><a href="rules.html#ai">AI Lab</a></strong> <span class="count">× 1</span><p>Draw an AI card: a bonus or a penalty, applied right away.</p></div>
+          </li>
+          <li class="key-item t-tax">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span>
+            <div><strong>Tax</strong> <span class="count">× 2</span><p>New computer: pay €200. Software subscriptions: pay €100.</p></div>
+          </li>
+          <li class="key-item t-start">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v13H4z"/><path d="M8 3v4M16 3v4M4 11h16M12 18v-4M10 16l2-2 2 2"/></svg></span>
+            <div><strong>Start of the month</strong> <span class="count">× 1</span><p>Collect €200 each time you pass or land here.</p></div>
+          </li>
+          <li class="key-item t-bug">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="7" width="8" height="12" rx="4"/><path d="M12 7V4M8 11H4M8 15H4M16 11h4M16 15h4M9 5l-2-2M15 5l2-2"/></svg></span>
+            <div><strong>Bug in prod</strong> <span class="count">× 1</span><p>Just visiting, or stuck until you pay €50 or roll a double.</p></div>
+          </li>
+          <li class="key-item t-crash">
+            <span class="key-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M10 12l4 4M14 12l-4 4"/></svg></span>
+            <div><strong>Your site crashes!</strong> <span class="count">× 1</span><p>Go straight to Bug in prod.</p></div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="groups">
+    <div class="wrap">
+      <h2>The 8 colour groups</h2>
+      <p class="sub">22 offices in 8 colours. Own a whole colour and your base invoice is <strong>doubled</strong>. Own every office on one side and you <strong>win</strong>.</p>
+      <div class="groups">
+        <div class="group" style="--c:var(--brown)">
+          <i></i>
+          <div>
+            <strong>Brown</strong>
+            <span>Side 1 · 2 offices · €120 to buy them all</span>
+            <ul>
+              <li><a href="#sq-1">Student bedroom</a><b>€60</b></li>
+              <li><a href="#sq-3">Garage</a><b>€60</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--sky)">
+          <i></i>
+          <div>
+            <strong>Sky blue</strong>
+            <span>Side 1 · 3 offices · €320 to buy them all</span>
+            <ul>
+              <li><a href="#sq-6">Coworking</a><b>€100</b></li>
+              <li><a href="#sq-8">Incubator</a><b>€100</b></li>
+              <li><a href="#sq-9">Startup hub</a><b>€120</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--pink)">
+          <i></i>
+          <div>
+            <strong>Pink</strong>
+            <span>Side 2 · 3 offices · €440 to buy them all</span>
+            <ul>
+              <li><a href="#sq-11">Shared office</a><b>€140</b></li>
+              <li><a href="#sq-13">City-centre office</a><b>€140</b></li>
+              <li><a href="#sq-14">Open space</a><b>€160</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--orange)">
+          <i></i>
+          <div>
+            <strong>Orange</strong>
+            <span>Side 2 · 3 offices · €560 to buy them all</span>
+            <ul>
+              <li><a href="#sq-16">Creative studio</a><b>€180</b></li>
+              <li><a href="#sq-18">Industrial loft</a><b>€180</b></li>
+              <li><a href="#sq-19">Office floor</a><b>€200</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--red)">
+          <i></i>
+          <div>
+            <strong>Red</strong>
+            <span>Side 3 · 3 offices · €680 to buy them all</span>
+            <ul>
+              <li><a href="#sq-21">Lille building</a><b>€220</b></li>
+              <li><a href="#sq-23">Bordeaux building</a><b>€220</b></li>
+              <li><a href="#sq-24">Lyon building</a><b>€240</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--yellow)">
+          <i></i>
+          <div>
+            <strong>Yellow</strong>
+            <span>Side 3 · 3 offices · €800 to buy them all</span>
+            <ul>
+              <li><a href="#sq-26">Marseille studio</a><b>€260</b></li>
+              <li><a href="#sq-27">Nantes HQ</a><b>€260</b></li>
+              <li><a href="#sq-29">Creative campus</a><b>€280</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--green)">
+          <i></i>
+          <div>
+            <strong>Green</strong>
+            <span>Side 4 · 3 offices · €920 to buy them all</span>
+            <ul>
+              <li><a href="#sq-31">Paris showroom</a><b>€300</b></li>
+              <li><a href="#sq-32">Private mansion</a><b>€300</b></li>
+              <li><a href="#sq-34">Paris rooftop</a><b>€320</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="group" style="--c:var(--navy)">
+          <i></i>
+          <div>
+            <strong>Navy</strong>
+            <span>Side 4 · 2 offices · €750 to buy them all</span>
+            <ul>
+              <li><a href="#sq-37">New York office</a><b>€350</b></li>
+              <li><a href="#sq-39">La Défense tower</a><b>€400</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="squares">
+    <div class="wrap">
+      <h2>All 40 squares</h2>
+      <p class="sub">Side by side, in the order your pawn visits them. Prices are the purchase price printed on the deed.</p>
+      <div class="grid sides">
+        <div class="card side">
+          <p class="h-sm">Side 1 · Bottom</p>
+          <p>From Start of the month to Bug in prod. From the garage to the startup hub: your very first offices.</p>
+          <ol class="sq-list">
+            <li id="sq-0" class="sq t-start">
+              <span class="num">0</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v13H4z"/><path d="M8 3v4M16 3v4M4 11h16M12 18v-4M10 16l2-2 2 2"/></svg></span>
+              <div><strong>Start of the month</strong><small>Collect €200 each time you pass or land here.</small></div>
+              
+            </li>
+            <li id="sq-1" class="sq t-office" style="--c:var(--brown)">
+              <span class="num">1</span>
+              <span class="sw"></span>
+              <div><strong>Student bedroom</strong><small>Office · Brown group</small></div>
+              <b>€60</b>
+            </li>
+            <li id="sq-2" class="sq t-skill">
+              <span class="num">2</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-3" class="sq t-office" style="--c:var(--brown)">
+              <span class="num">3</span>
+              <span class="sw"></span>
+              <div><strong>Garage</strong><small>Office · Brown group</small></div>
+              <b>€60</b>
+            </li>
+            <li id="sq-4" class="sq t-tax">
+              <span class="num">4</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span>
+              <div><strong>New computer</strong><small>Pay €200 to the bank.</small></div>
+              
+            </li>
+            <li id="sq-5" class="sq t-hosting">
+              <span class="num">5</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+              <div><strong>CloudNest</strong><small>Hosting provider</small></div>
+              <b>€200</b>
+            </li>
+            <li id="sq-6" class="sq t-office" style="--c:var(--sky)">
+              <span class="num">6</span>
+              <span class="sw"></span>
+              <div><strong>Coworking</strong><small>Office · Sky blue group</small></div>
+              <b>€100</b>
+            </li>
+            <li id="sq-7" class="sq t-skill">
+              <span class="num">7</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-8" class="sq t-office" style="--c:var(--sky)">
+              <span class="num">8</span>
+              <span class="sw"></span>
+              <div><strong>Incubator</strong><small>Office · Sky blue group</small></div>
+              <b>€100</b>
+            </li>
+            <li id="sq-9" class="sq t-office" style="--c:var(--sky)">
+              <span class="num">9</span>
+              <span class="sw"></span>
+              <div><strong>Startup hub</strong><small>Office · Sky blue group</small></div>
+              <b>€120</b>
+            </li>
+          </ol>
+        </div>
+        <div class="card side">
+          <p class="h-sm">Side 2 · Left</p>
+          <p>From Bug in prod to AI Lab. Shared offices and studios for a growing team.</p>
+          <ol class="sq-list">
+            <li id="sq-10" class="sq t-bug">
+              <span class="num">10</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="7" width="8" height="12" rx="4"/><path d="M12 7V4M8 11H4M8 15H4M16 11h4M16 15h4M9 5l-2-2M15 5l2-2"/></svg></span>
+              <div><strong>Bug in prod</strong><small>Just visiting? Nothing happens. Sent here? Pay €50 or roll a double to get out.</small></div>
+              
+            </li>
+            <li id="sq-11" class="sq t-office" style="--c:var(--pink)">
+              <span class="num">11</span>
+              <span class="sw"></span>
+              <div><strong>Shared office</strong><small>Office · Pink group</small></div>
+              <b>€140</b>
+            </li>
+            <li id="sq-12" class="sq t-skill">
+              <span class="num">12</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-13" class="sq t-office" style="--c:var(--pink)">
+              <span class="num">13</span>
+              <span class="sw"></span>
+              <div><strong>City-centre office</strong><small>Office · Pink group</small></div>
+              <b>€140</b>
+            </li>
+            <li id="sq-14" class="sq t-office" style="--c:var(--pink)">
+              <span class="num">14</span>
+              <span class="sw"></span>
+              <div><strong>Open space</strong><small>Office · Pink group</small></div>
+              <b>€160</b>
+            </li>
+            <li id="sq-15" class="sq t-hosting">
+              <span class="num">15</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+              <div><strong>ServO</strong><small>Hosting provider</small></div>
+              <b>€200</b>
+            </li>
+            <li id="sq-16" class="sq t-office" style="--c:var(--orange)">
+              <span class="num">16</span>
+              <span class="sw"></span>
+              <div><strong>Creative studio</strong><small>Office · Orange group</small></div>
+              <b>€180</b>
+            </li>
+            <li id="sq-17" class="sq t-skill">
+              <span class="num">17</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-18" class="sq t-office" style="--c:var(--orange)">
+              <span class="num">18</span>
+              <span class="sw"></span>
+              <div><strong>Industrial loft</strong><small>Office · Orange group</small></div>
+              <b>€180</b>
+            </li>
+            <li id="sq-19" class="sq t-office" style="--c:var(--orange)">
+              <span class="num">19</span>
+              <span class="sw"></span>
+              <div><strong>Office floor</strong><small>Office · Orange group</small></div>
+              <b>€200</b>
+            </li>
+          </ol>
+        </div>
+        <div class="card side">
+          <p class="h-sm">Side 3 · Top</p>
+          <p>From AI Lab to Your site crashes! Big French cities: your agency opens branches.</p>
+          <ol class="sq-list">
+            <li id="sq-20" class="sq t-ai">
+              <span class="num">20</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7z"/></svg></span>
+              <div><strong>AI Lab</strong><small>Draw an AI card and apply it right away.</small></div>
+              
+            </li>
+            <li id="sq-21" class="sq t-office" style="--c:var(--red)">
+              <span class="num">21</span>
+              <span class="sw"></span>
+              <div><strong>Lille building</strong><small>Office · Red group</small></div>
+              <b>€220</b>
+            </li>
+            <li id="sq-22" class="sq t-skill">
+              <span class="num">22</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-23" class="sq t-office" style="--c:var(--red)">
+              <span class="num">23</span>
+              <span class="sw"></span>
+              <div><strong>Bordeaux building</strong><small>Office · Red group</small></div>
+              <b>€220</b>
+            </li>
+            <li id="sq-24" class="sq t-office" style="--c:var(--red)">
+              <span class="num">24</span>
+              <span class="sw"></span>
+              <div><strong>Lyon building</strong><small>Office · Red group</small></div>
+              <b>€240</b>
+            </li>
+            <li id="sq-25" class="sq t-hosting">
+              <span class="num">25</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+              <div><strong>NuageBox</strong><small>Hosting provider</small></div>
+              <b>€200</b>
+            </li>
+            <li id="sq-26" class="sq t-office" style="--c:var(--yellow)">
+              <span class="num">26</span>
+              <span class="sw"></span>
+              <div><strong>Marseille studio</strong><small>Office · Yellow group</small></div>
+              <b>€260</b>
+            </li>
+            <li id="sq-27" class="sq t-office" style="--c:var(--yellow)">
+              <span class="num">27</span>
+              <span class="sw"></span>
+              <div><strong>Nantes HQ</strong><small>Office · Yellow group</small></div>
+              <b>€260</b>
+            </li>
+            <li id="sq-28" class="sq t-skill">
+              <span class="num">28</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-29" class="sq t-office" style="--c:var(--yellow)">
+              <span class="num">29</span>
+              <span class="sw"></span>
+              <div><strong>Creative campus</strong><small>Office · Yellow group</small></div>
+              <b>€280</b>
+            </li>
+          </ol>
+        </div>
+        <div class="card side">
+          <p class="h-sm">Side 4 · Right</p>
+          <p>From Your site crashes! to Start of the month. Prestige addresses, all the way to the tower.</p>
+          <ol class="sq-list">
+            <li id="sq-30" class="sq t-crash">
+              <span class="num">30</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M10 12l4 4M14 12l-4 4"/></svg></span>
+              <div><strong>Your site crashes!</strong><small>Go straight to Bug in prod, without passing Start of the month.</small></div>
+              
+            </li>
+            <li id="sq-31" class="sq t-office" style="--c:var(--green)">
+              <span class="num">31</span>
+              <span class="sw"></span>
+              <div><strong>Paris showroom</strong><small>Office · Green group</small></div>
+              <b>€300</b>
+            </li>
+            <li id="sq-32" class="sq t-office" style="--c:var(--green)">
+              <span class="num">32</span>
+              <span class="sw"></span>
+              <div><strong>Private mansion</strong><small>Office · Green group</small></div>
+              <b>€300</b>
+            </li>
+            <li id="sq-33" class="sq t-skill">
+              <span class="num">33</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-34" class="sq t-office" style="--c:var(--green)">
+              <span class="num">34</span>
+              <span class="sw"></span>
+              <div><strong>Paris rooftop</strong><small>Office · Green group</small></div>
+              <b>€320</b>
+            </li>
+            <li id="sq-35" class="sq t-hosting">
+              <span class="num">35</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+              <div><strong>HostaLine</strong><small>Hosting provider</small></div>
+              <b>€200</b>
+            </li>
+            <li id="sq-36" class="sq t-skill">
+              <span class="num">36</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></span>
+              <div><strong>Skill</strong><small>Draw a Skill card</small></div>
+              
+            </li>
+            <li id="sq-37" class="sq t-office" style="--c:var(--navy)">
+              <span class="num">37</span>
+              <span class="sw"></span>
+              <div><strong>New York office</strong><small>Office · Navy group</small></div>
+              <b>€350</b>
+            </li>
+            <li id="sq-38" class="sq t-tax">
+              <span class="num">38</span>
+              <span class="sw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg></span>
+              <div><strong>Software subscriptions</strong><small>Pay €100 to the bank.</small></div>
+              
+            </li>
+            <li id="sq-39" class="sq t-office" style="--c:var(--navy)">
+              <span class="num">39</span>
+              <span class="sw"></span>
+              <div><strong>La Défense tower</strong><small>Office · Navy group</small></div>
+              <b>€400</b>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Webopoly · Official wiki</span>
+    <span>Placeholder: links, contact, credits</span>
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+</body>
+</html>

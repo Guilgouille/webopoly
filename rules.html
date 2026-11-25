@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game rules – Webopoly Wiki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="logo" href="index.html" aria-label="Webopoly, wiki home">
+        <img src="images/logo.png" alt="">
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+  <nav class="nav wrap" id="nav" aria-label="Main navigation">
+    <a href="rules.html" aria-current="page">Rules</a>
+    <a href="board.html">Board</a>
+    <a href="skills.html">Skills</a>
+    <a href="hosting.html">Hosting</a>
+    <a href="dice.html">Dice</a>
+    <a class="btn btn-primary" href="rules.html#setup">Get started</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="page-head">
+      <ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Rules</li></ol>
+      <h1>Game rules</h1>
+      <p class="kicker">Buy offices · Place skills · Send invoices · Win!</p>
+      <p>From garage to tower: build your web agency. <strong>2–5 players · 1 hour</strong></p>
+      <nav class="chips" aria-label="On this page">
+        <a class="chip" href="#setup">Setting up</a>
+        <a class="chip" href="#play">How to play</a>
+        <a class="chip" href="#squares">Types of squares</a>
+        <a class="chip" href="#outside">Outside your turn</a>
+        <a class="chip" href="#win">How to win</a>
+        <a class="chip" href="#ai">AI cards</a>
+        <a class="chip" href="#money">Need money?</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==========  Contents & setting up  ========== -->
+  <section id="setup">
+    <div class="wrap">
+      <h2>Setting up</h2>
+      <p class="sub">Everything you need before the first roll.</p>
+
+      <div class="split">
+        <div class="card">
+          <p class="h-sm">Contents</p>
+          <p>1 game board · 26 title deeds (22 offices, 4 hosting providers) · 40 Skill cards · 10 AI cards · 5 Profile cards · 5 pawns · 2 dice · 250 banknotes · 1 add-on</p>
+        </div>
+        <div class="card">
+          <p class="h-sm">Profiles and their family</p>
+          <ul class="swatches">
+            <li style="--c:var(--com)"><i></i><strong>Communication Officer</strong><span>→ Communication</span></li>
+            <li style="--c:var(--mkt)"><i></i><strong>Marketer</strong><span>→ Marketing</span></li>
+            <li style="--c:var(--des)"><i></i><strong>Graphic Designer</strong><span>→ Graphic Design</span></li>
+            <li style="--c:var(--ux)"><i></i><strong>UI/UX Designer</strong><span>→ UX/UI Design</span></li>
+            <li style="--c:var(--dev)"><i></i><strong>Developer</strong><span>→ Development</span></li>
+          </ul>
+          <p>Your profile gives you <strong>half price</strong> when you place Skill cards from its family.</p>
+        </div>
+      </div>
+
+      <div class="split wide-left" style="margin-top:20px">
+        <div>
+          <ol class="steps">
+            <li><div><strong>Choose a profile</strong>, taking turns. Two players cannot have the same one.</div></li>
+            <li><div><strong>Take your starting Skill card:</strong> pick one at random from the 8 cards in your profile's skill category and read it aloud.</div></li>
+            <li><div><strong>Receive €1,500</strong> (see the banknotes below). The rest of the banknotes form the bank.</div></li>
+            <li><div><strong>Make 2 separate decks</strong>, face down: Skill cards and AI cards, in their spots in the middle of the board.</div></li>
+            <li><div><strong>Place the pawns</strong> on Start of the month. The youngest player starts, then play goes clockwise.</div></li>
+          </ol>
+          <figure class="figure" style="margin-top:20px">
+            <img src="images/tabletop-game.png" alt="The Webopoly board: 40 squares around the edge with offices in 8 colour groups, 4 hosting providers, Skill and AI Lab squares, and the Skill and AI card decks in the middle." loading="lazy">
+            <figcaption>The game board. Skill cards and AI cards go face down on their spots in the middle.</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel">
+          <h3>Each player starts with</h3>
+          <ul class="notes">
+            <li style="--c:var(--com)">2 ×<b>€500</b></li>
+            <li style="--c:var(--mkt)">2 ×<b>€100</b></li>
+            <li style="--c:var(--ux)">2 ×<b>€50</b></li>
+            <li style="--c:var(--dev)">6 ×<b>€20</b></li>
+            <li style="--c:var(--des)">5 ×<b>€10</b></li>
+            <li style="--c:var(--com)">5 ×<b>€5</b></li>
+            <li style="--c:var(--ux)">5 ×<b>€1</b></li>
+          </ul>
+          <p class="notes-total">= €1,500</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  How to play  ========== -->
+  <section id="play">
+    <div class="wrap">
+      <h2>How to play</h2>
+      <p class="sub"><strong>Who goes first?</strong> The youngest player starts, then play goes clockwise.</p>
+
+      <div class="split wide-left">
+        <div class="card">
+          <p class="h-sm">On your turn</p>
+          <ol class="steps">
+            <li><div>Roll the 2 dice and move your pawn that many squares.</div></li>
+            <li><div>Do what your square says: buy an office, pay an invoice, draw a card… (see <a href="#squares"><strong>Types of squares</strong></a> below).</div></li>
+            <li><div>If you want: place Skill cards on your offices, start an auction or make a deal.</div></li>
+            <li><div>Rolled a <strong>double</strong>? Play again. Third double in a row: go straight to <strong>Bug in prod</strong>.</div></li>
+          </ol>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr">
+          <div class="card start">
+            <h3>Start of the month</h3>
+            <p>Each time you pass or land on <strong>Start of the month</strong>, collect <strong>€200</strong> from the bank. It's your agency's monthly income!</p>
+          </div>
+          <div class="card">
+            <h3>Your profile</h3>
+            <p>Your profile (Communication Officer, Marketer, Graphic Designer, UI/UX Designer or Developer) gives you a starting Skill card and <strong>half price</strong> when you place Skill cards from its family.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  Types of squares  ========== -->
+  <section id="squares">
+    <div class="wrap">
+      <h2>Types of squares</h2>
+      <p class="sub">What happens when your pawn lands on each square.</p>
+      <div class="grid">
+        <div class="card" style="--c:var(--com)">
+          <span class="bar-c"></span>
+          <h3>1) Offices</h3>
+          <p>Free? You can <strong>buy it</strong> at the price on the deed (read its sentence out loud). Owned by a rival? <strong>Pay their invoice.</strong> Your own? Nothing happens.</p>
+        </div>
+        <div class="card" style="--c:var(--dev)">
+          <span class="bar-c"></span>
+          <h3>2) Hosting providers</h3>
+          <p>Free? Buy it for <strong>€200</strong>. Owned by a rival? Pay <strong>€25</strong> for 1 provider, <strong>€50</strong> for 2, <strong>€100</strong> for 3. Own all 4 and you <strong>win</strong>! <a href="hosting.html">See the providers</a>.</p>
+        </div>
+        <div class="card" style="--c:var(--ux)">
+          <span class="bar-c"></span>
+          <h3>3) Skill squares</h3>
+          <p>Draw a <strong>Skill card</strong>, read it out loud and keep it in your hand. It's free! Scan its QR code to learn more in the app, or read it in the <a href="skills.html">Skills section</a>.</p>
+        </div>
+        <div class="card" style="--c:var(--mkt)">
+          <span class="bar-c"></span>
+          <h3>4) AI Lab</h3>
+          <p>Pick an <a href="#ai"><strong>AI card</strong></a> and apply it right away: a <strong>bonus</strong> (the AI helps) or a <strong>penalty</strong> (it hallucinates, copies or leaks data).</p>
+        </div>
+        <div class="card" style="--c:var(--des)">
+          <span class="bar-c"></span>
+          <h3>5) Taxes</h3>
+          <p><strong>New computer:</strong> pay €200. <strong>Software subscriptions:</strong> pay €100. The money goes to the bank.</p>
+        </div>
+        <div class="card" style="--c:var(--com)">
+          <span class="bar-c"></span>
+          <h3>6) Your site crashes!</h3>
+          <p>Go straight to <strong>Bug in prod</strong>, without passing Start of the month.</p>
+        </div>
+        <div class="card bug" style="--c:var(--dev)">
+          <span class="bar-c"></span>
+          <h3>7) Bug in prod</h3>
+          <p>Just visiting? Nothing happens. Sent there? Pay <strong>€50</strong> or roll a double to get out. After 3 turns, pay €50 and leave. You still collect your invoices.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p class="h-sm">Good to know</p>
+        <ul>
+          <li><strong>If there are no Skill cards in your area:</strong> opposing players pay you the normal price on the bill.</li>
+          <li><strong>2 Skill cards from the same family:</strong> place them on 2 offices, auction one or trade it.</li>
+          <li><strong>Office on hold</strong> (token on its square): you pay nothing.</li>
+          <li><strong>Skill deck empty:</strong> the Skill square pays €50 instead.</li>
+          <li><strong>Owner in Bug in prod:</strong> they still collect their invoice.</li>
+          <li><strong>Hosting provider:</strong> Skill cards change nothing there.</li>
+          <li><strong>Colour split between two players:</strong> nobody gets the doubled base invoice: negotiate.</li>
+          <li><strong>Forgot to claim an invoice?</strong> Claim it before the next player rolls.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  Outside your turn  ========== -->
+  <section id="outside">
+    <div class="wrap">
+      <h2>Don't wait for your turn!</h2>
+      <p class="sub">Some actions happen <strong>outside your turn</strong>. Stay alert!</p>
+      <div class="grid cols-4">
+        <div class="card">
+          <h3>1) Collect your invoice</h3>
+          <p>When a rival lands on your office, they pay you: <strong>base invoice + the value of every Skill card placed on it</strong>. The amounts are printed on the deed. Own the whole colour? The base invoice is doubled.</p>
+          <p>Forgot to ask? You can claim it until the next player rolls the dice.</p>
+        </div>
+        <div class="card">
+          <h3>2) Auctions</h3>
+          <p>Put a Skill card from your hand up for auction: announce a starting price, the others bid, the highest bidder pays you and takes the card. It's the <strong>only way to buy</strong> a Skill card.</p>
+        </div>
+        <div class="card">
+          <h3>3) Place Skill cards</h3>
+          <p>On your turn, place Skill cards on your offices: <strong>one per family, 5 max per office</strong>. Pay the bank the placement cost printed on the deed (half price for your profile's family).</p>
+        </div>
+        <div class="card">
+          <h3>4) Make deals with your rivals!</h3>
+          <p>Between two turns, trade or sell offices, hosting providers, Skill cards in hand and the AI Debug card, for money or anything else. <strong>The price is up for negotiation.</strong></p>
+          <p>Nobody wants your Skill card? The bank buys it for <strong>€50</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  How to win  ========== -->
+  <section id="win">
+    <div class="wrap">
+      <h2>How to win</h2>
+      <p class="sub">The first player to reach one of these goals wins straight away.</p>
+      <div class="grid">
+        <div class="card" style="--c:var(--com)">
+          <span class="bar-c"></span>
+          <h3>A full side</h3>
+          <p>Own every office on one side of the board (hosting providers do not count).</p>
+        </div>
+        <div class="card" style="--c:var(--dev)">
+          <span class="bar-c"></span>
+          <h3>All 4 providers</h3>
+          <p>Own the 4 <a href="hosting.html">hosting providers</a>.</p>
+        </div>
+        <div class="card" style="--c:var(--ux)">
+          <span class="bar-c"></span>
+          <h3>Last one standing</h3>
+          <p>All the other players have gone bankrupt.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>One-hour variant:</strong> if nobody has won after one hour, the player with the most money wins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  AI cards & money  ========== -->
+  <section id="ai">
+    <div class="wrap">
+      <div class="split wide-left">
+        <div>
+          <h2>The 10 AI cards</h2>
+          <p class="sub">Drawn on the <strong>AI Lab</strong> square and applied right away. After use, put the card back at the bottom of the deck. Only <strong>AI Debug</strong> can be kept.</p>
+          <ul class="ai-list">
+            <li><span class="pill bonus">Bonus</span><span><strong>AI Copywriter:</strong> draw a Skill card.</span></li>
+            <li><span class="pill bonus">Bonus</span><span><strong>AI Coding Assistant:</strong> place a Skill card for free.</span></li>
+            <li><span class="pill bonus">Bonus</span><span><strong>AI Chatbot:</strong> collect €100 from the bank.</span></li>
+            <li><span class="pill bonus">Bonus</span><span><strong>AI Image Generator:</strong> each player pays you €20.</span></li>
+            <li><span class="pill bonus">Bonus</span><span><strong>AI Debug:</strong> keep it: get out of Bug in prod for free.</span></li>
+            <li><span class="pill penalty">Penalty</span><span><strong>Hallucination:</strong> pay €100 to the bank.</span></li>
+            <li><span class="pill penalty">Penalty</span><span><strong>Plagiarism:</strong> discard a Skill card, or pay €50.</span></li>
+            <li><span class="pill penalty">Penalty</span><span><strong>Data leak:</strong> pay €150 to the bank.</span></li>
+            <li><span class="pill penalty">Penalty</span><span><strong>AI-generated bug:</strong> go straight to Bug in prod.</span></li>
+            <li><span class="pill penalty">Penalty</span><span><strong>AI tool outage:</strong> move back 3 squares.</span></li>
+          </ul>
+          <div class="callout">
+            <p><strong>Key takeaway:</strong> AI is a powerful tool, but always check what it produces.</p>
+          </div>
+        </div>
+
+        <div class="panel" id="money">
+          <h3>Help! I need money!</h3>
+          <div class="card">
+            <p style="color:var(--ink)">If you have to pay more than you have:</p>
+            <ol class="steps">
+              <li><div><strong>Remove placed Skill cards:</strong> the bank refunds half of their placement cost.</div></li>
+              <li><div><strong>Sell</strong> to another player.</div></li>
+            </ol>
+            <p style="color:var(--ink)">Still can't pay? You're <strong>bankrupt</strong>: everything goes to the player you owe (or the bank) and you leave the game.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========  Credits  ========== -->
+  <section id="credits">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <h2>Thanks for playing!</h2>
+          <p class="sub">You now know the 5 skills every web agency needs: Communication, Marketing, Graphic Design, UX/UI Design and Development. Ready to launch yours?</p>
+          <p class="sub">Webopoly is a serious game designed by MDS Paris students. Scan the QR code on the board to open the app: dice, rules and the full content of every Skill card.</p>
+        </div>
+        <div class="card">
+          <p class="h-sm">The team</p>
+          <ul class="swatches">
+            <li style="--c:var(--dev)"><i></i><strong>Guilhem Druez</strong><span>Developer</span></li>
+            <li style="--c:var(--ux)"><i></i><strong>Gaëtan Josse</strong><span>Developer</span></li>
+            <li style="--c:var(--com)"><i></i><strong>Corentin Nivore</strong><span>UI/UX Designer</span></li>
+            <li style="--c:var(--mkt)"><i></i><strong>Kathleen Louis</strong><span>UI/UX Designer</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Webopoly · Official wiki</span>
+    <span>Placeholder: links, contact, credits</span>
+  </div>
+</footer>
+
+<script src="js/nav.js" defer></script>
+</body>
+</html>

@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Accessibility – Webopoly Wiki</title>
+<meta name="description" content="An accessible site can be used by everyone, including people with disabilities: blind or visually impaired people, deaf or hard-of-hearing people, people who cannot use a mouse, or who have difficulty concentrating or understanding.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -21,13 +22,12 @@
     </div>
   </div>
   <nav class="nav wrap" id="nav" aria-label="Main navigation">
-    <a href="../index.html#rules">Rules</a>
-    <a href="../index.html#board">Board</a>
+    <a href="../rules.html">Rules</a>
+    <a href="../board.html">Board</a>
     <a href="../skills.html" aria-current="page">Skills</a>
     <a href="../hosting.html">Hosting</a>
-    <a href="../index.html#groups">Properties</a>
-    <a href="../index.html#glossary">Glossary</a>
-    <a class="btn btn-primary" href="../index.html#rules">Get started</a>
+    <a href="../dice.html">Dice</a>
+    <a class="btn btn-primary" href="../rules.html#setup">Get started</a>
   </nav>
 </header>
 
@@ -43,27 +43,28 @@
       <h1>Accessibility</h1>
       <div class="chips">
         <span class="tag">Development</span>
+        <span class="tag id">DEV-05</span>
       </div>
     </div>
 
     <div class="article">
       <article class="prose">
         <h2 id="description">Detailed description</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>An accessible site can be used by <strong>everyone</strong>, including people with disabilities: blind or visually impaired people, deaf or hard-of-hearing people, people who cannot use a mouse, or who have difficulty concentrating or understanding. It also concerns temporary situations: an arm in a cast, a screen seen in bright sunlight, a noisy environment.</p>
+        <p>The international rules are called the <strong>WCAG</strong> (in France, the equivalent standard is the RGAA, mandatory for certain organizations). The basic good practices: add an <strong>alternative text</strong> to every image so that <strong>screen readers</strong> (software that reads the page aloud) can describe it, check <strong>contrast</strong>, allow everything to be done <strong>with a keyboard</strong>, caption videos, and link each form field to a clear label. Good news: these efforts also benefit search ranking and all users.</p>
 
         <h2 id="examples">Examples of use cases</h2>
         <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-          <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</li>
+          <li>Adding alternative text to a product photo: “Silver ring set with a blue stone”.</li>
+          <li>Navigating your own site using only the Tab key: you quickly see what blocks.</li>
+          <li>Captioning a presentation video for deaf people and for those watching without sound.</li>
         </ul>
 
         <h2 id="vocabulary">Vocabulary to know</h2>
         <dl class="vocab">
-          <div><dt>Lorem</dt><dd>Ipsum dolor sit amet, consectetur adipiscing elit.</dd></div>
-          <div><dt>Dolor sit</dt><dd>Sed do eiusmod tempor incididunt ut labore.</dd></div>
-          <div><dt>Amet</dt><dd>Ut enim ad minim veniam, quis nostrud exercitation.</dd></div>
+          <div><dt>WCAG</dt><dd>The international web accessibility rules.</dd></div>
+          <div><dt>Screen reader</dt><dd>Software that reads a page’s content aloud.</dd></div>
+          <div><dt>Alternative text (<em>alt</em> attribute)</dt><dd>The description of an image intended for those who cannot see it.</dd></div>
         </dl>
 
         <nav class="pager" aria-label="Previous and next skill">
@@ -73,10 +74,6 @@
       </article>
 
       <aside class="aside">
-        <div class="card-visual" role="img" aria-label="Accessibility card image placeholder">
-          <strong>Accessibility</strong>
-          <span>Card image placeholder</span>
-        </div>
         <nav class="toc" aria-label="On this page">
           <strong>On this page</strong>
           <a href="#description">Detailed description</a>
