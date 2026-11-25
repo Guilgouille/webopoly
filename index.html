@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,103 +14,109 @@
 <header class="site-header">
   <div class="wrap">
     <div class="bar">
-      <a class="logo" href="#top" aria-label="Webopoly, accueil du wiki">
+      <a class="logo" href="index.html" aria-label="Webopoly, wiki home">
         <img src="images/logo.png" alt="">
       </a>
-      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
     </div>
   </div>
-  <nav class="nav wrap" id="nav" aria-label="Navigation principale">
-    <a href="#regles" aria-current="page">Règles</a>
-    <a href="#plateau">Plateau</a>
-    <a href="#cartes">Cartes</a>
-    <a href="#groupes">Propriétés</a>
-    <a href="#glossaire">Glossaire</a>
-    <a class="btn btn-primary" href="#regles">Commencer</a>
+  <nav class="nav wrap" id="nav" aria-label="Main navigation">
+    <a href="index.html#rules">Rules</a>
+    <a href="index.html#board">Board</a>
+    <a href="skills.html">Skills</a>
+    <a href="hosting.html">Hosting</a>
+    <a href="index.html#groups">Properties</a>
+    <a href="index.html#glossary">Glossary</a>
+    <a class="btn btn-primary" href="index.html#rules">Get started</a>
   </nav>
 </header>
 
 <main id="top">
   <div class="wrap">
     <div class="hero">
-      <span class="badge">Wiki officiel · v0.1</span>
-      <h1>Tout savoir sur Webopoly</h1>
-      <p>Placeholder : une phrase qui explique le jeu, ses règles et ce qu’on trouve dans ce wiki.</p>
+      <span class="badge">Official wiki · v0.1</span>
+      <h1>Everything about Webopoly</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <form class="search" role="search" onsubmit="return false">
-        <input type="search" placeholder="Rechercher une case, une carte, une règle" aria-label="Rechercher dans le wiki">
-        <button class="btn btn-primary" type="submit">Rechercher</button>
+        <input type="search" placeholder="Search for a space, a card, a rule" aria-label="Search the wiki">
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
       <div class="hero-cta">
-        <a class="btn btn-ghost" href="#regles">Lire les règles</a>
-        <a class="btn btn-ghost" href="#plateau">Voir le plateau</a>
+        <a class="btn btn-ghost" href="#rules">Read the rules</a>
+        <a class="btn btn-ghost" href="skills.html">Browse the 40 skills</a>
       </div>
     </div>
   </div>
 
-  <section id="regles">
+  <section id="rules">
     <div class="wrap">
-      <h2>Explorer le wiki</h2>
-      <p class="sub">Placeholder : choisis une catégorie pour commencer.</p>
+      <h2>Explore the wiki</h2>
+      <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="grid">
-        <a class="card" href="#regles">
+        <a class="card" href="#rules">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M8 7h6M8 11h6"/></svg></div>
-          <h3>Règles du jeu</h3>
-          <p>Placeholder : mise en place, tour de jeu, conditions de victoire.</p>
+          <h3>Game rules</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a class="card" id="plateau" href="#plateau">
+        <a class="card" id="board" href="#board">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg></div>
-          <h3>Plateau et cases</h3>
-          <p>Placeholder : propriétés, hébergements, cases spéciales.</p>
+          <h3>Board and spaces</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a class="card dashed" id="cartes" href="#cartes">
+        <a class="card" id="cards" href="skills.html">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0012 3z"/></svg></div>
-          <h3>Cartes Skill</h3>
-          <p>Placeholder : liste et effets des cartes Skill.</p>
+          <h3>Skill cards</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a class="card dashed" href="#cartes">
+        <a class="card" href="hosting.html">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
+          <h3>Hosting cards</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </a>
+        <a class="card dashed" href="#cards">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg></div>
-          <h3>Cartes IA</h3>
-          <p>Placeholder : liste et effets des cartes IA.</p>
+          <h3>AI cards</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a class="card bug" href="#plateau">
+        <a class="card bug" href="#board">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8a4 4 0 018 0v6a4 4 0 01-8 0zM3 13h5M16 13h5M5 7l3 2M19 7l-3 2M5 20l3-3M19 20l-3-3"/></svg></div>
-          <h3>Bug en prod</h3>
-          <p>Placeholder : prison, visite simple, comment en sortir.</p>
+          <h3>Bug in prod</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
-        <a class="card start" id="glossaire" href="#glossaire">
+        <a class="card start" id="glossary" href="#glossary">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
-          <h3>Glossaire</h3>
-          <p>Placeholder : tous les termes du jeu, de A à Z.</p>
+          <h3>Glossary</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="groupes">
+  <section id="groups">
     <div class="wrap">
-      <h2>Groupes de propriétés</h2>
-      <p class="sub">Placeholder : les 8 groupes de couleur du plateau.</p>
+      <h2>Property groups</h2>
+      <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="groups">
-        <div class="group" style="--c:var(--brown)"><i></i><div><strong>Marron</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--sky)"><i></i><div><strong>Bleu ciel</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--pink)"><i></i><div><strong>Rose</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--orange)"><i></i><div><strong>Orange</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--red)"><i></i><div><strong>Rouge</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--yellow)"><i></i><div><strong>Jaune</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--green)"><i></i><div><strong>Vert</strong><span>Placeholder</span></div></div>
-        <div class="group" style="--c:var(--navy)"><i></i><div><strong>Bleu marine</strong><span>Placeholder</span></div></div>
+        <div class="group" style="--c:var(--brown)"><i></i><div><strong>Brown</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--sky)"><i></i><div><strong>Light blue</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--pink)"><i></i><div><strong>Pink</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--orange)"><i></i><div><strong>Orange</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--red)"><i></i><div><strong>Red</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--yellow)"><i></i><div><strong>Yellow</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--green)"><i></i><div><strong>Green</strong><span>Lorem ipsum</span></div></div>
+        <div class="group" style="--c:var(--navy)"><i></i><div><strong>Dark blue</strong><span>Lorem ipsum</span></div></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <h2>Derniers articles</h2>
-      <p class="sub">Placeholder : les pages récemment ajoutées ou modifiées.</p>
+      <h2>Latest articles</h2>
+      <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="grid">
-        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
-        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
-        <div class="card"><h3>Titre de l’article</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><h3>Article title</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><h3>Article title</h3><div class="ph w80"></div><div class="ph w60"></div></div>
+        <div class="card"><h3>Article title</h3><div class="ph w80"></div><div class="ph w60"></div></div>
       </div>
     </div>
   </section>
@@ -118,8 +124,8 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Webopoly · Wiki officiel</span>
-    <span>Placeholder : liens, contact, crédits</span>
+    <span>© 2026 Webopoly · Official wiki</span>
+    <span>Placeholder: links, contact, credits</span>
   </div>
 </footer>
 

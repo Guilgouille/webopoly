@@ -1,5 +1,5 @@
-/* Webopoly Wiki – feuille de style globale (mobile first)
-   Variables de couleur dans :root, réutilisables sur toutes les pages. */
+/* Webopoly Wiki – global stylesheet (mobile first)
+   Color variables live in :root and are reused on every page. */
 
 :root {
   --bg: #ffffff;
@@ -21,6 +21,12 @@
   --yellow: #EAB308;
   --sky: #38BDF8;
   --brown: #8B5E3C;
+  /* Skill families */
+  --com: #FFB784;
+  --mkt: #E6A7E6;
+  --des: #FFD2D2;
+  --ux: #96CA9C;
+  --dev: #93CEE1;
   --shadow:
     0 1px 2px rgba(22, 21, 46, 0.06), 0 8px 24px rgba(79, 70, 229, 0.08);
   --radius: 14px;
@@ -386,5 +392,255 @@ footer .wrap {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* =====================================================================
+   Inner pages (skills.html, skill.html, hosting.html)
+   ===================================================================== */
+
+/* ==========  Page header & breadcrumb  ========== */
+.page-head {
+  padding: 28px 0 8px;
+}
+.page-head h1 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  margin: 12px 0 10px;
+}
+.page-head p {
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0;
+  font-size: 1.05rem;
+}
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.crumbs li + li::before {
+  content: "/";
+  margin-right: 6px;
+  color: var(--line);
+}
+.crumbs a:hover {
+  color: var(--brand);
+}
+
+/* ==========  Chips (family filters / quick links)  ========== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.chip:hover {
+  background: var(--tint);
+  color: var(--brand);
+}
+.chip i,
+.family-head i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c, var(--brand));
+}
+
+/* ==========  Skill families & skill cards  ========== */
+.family-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.family-head h2 {
+  margin: 0;
+}
+.family-head i {
+  width: 14px;
+  height: 14px;
+}
+.tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.card.skill {
+  border-top: 6px solid var(--c, var(--brand));
+}
+/* Family tag filled with the family color (falls back to the tint when no --c) */
+.card.skill .tag,
+.page-head .tag {
+  background: var(--c, var(--tint));
+  color: var(--ink);
+}
+a.card:hover {
+  border-color: var(--brand);
+}
+
+/* ==========  Article layout (skill & hosting pages)  ========== */
+.article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  padding: 24px 0 8px;
+}
+.prose h2 {
+  margin-top: 32px;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p,
+.prose li {
+  color: var(--ink);
+  max-width: 68ch;
+}
+.prose ul {
+  padding-left: 20px;
+}
+.prose li + li {
+  margin-top: 6px;
+}
+.vocab {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+.vocab div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.vocab dt {
+  font-weight: 700;
+}
+.vocab dd {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.card-visual {
+  aspect-ratio: 5 / 7;
+  width: min(100%, 260px);
+  border: 1px dashed var(--line);
+  border-top: 10px solid var(--c, var(--brand));
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--c, var(--brand)) 25%, var(--surface));
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 16px;
+}
+.card-visual strong {
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.toc strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.toc a {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.toc a:hover {
+  background: var(--tint);
+  color: var(--brand);
+}
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* ==========  Hosting cards  ========== */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 4px 0 0;
+}
+.stats div {
+  background: var(--tint);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.stats dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.stats dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .vocab {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .page-head {
+    padding: 48px 0 8px;
+  }
+  .article {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 48px;
+  }
+  .card-visual {
+    width: 100%;
+  }
+  .aside {
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 140px);
+    align-self: start;
   }
 }
